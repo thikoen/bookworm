@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_centerHorizontal="true">
+    <FrameLayout
+        android:id="@+id/flToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/wormIcon"
+        android:layout_width="223dp"
+        android:layout_height="240dp"
+        android:src="@drawable/worm_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:text="@string/bookworm_home"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/wormIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.765" />
+
+    <ImageView
+        android:id="@+id/addBookIV"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/addbook_icon"
+        app:layout_constraintEnd_toStartOf="@+id/shelfIV"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wormIcon" />
+
+    <ImageView
+        android:id="@+id/shelfIV"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/shelf_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/addBookIV"
+        app:layout_constraintTop_toBottomOf="@+id/wormIcon" />
+
+    <TextView
+        android:id="@+id/addBookTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/add_book"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/shelfTV"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addBookIV" />
+
+    <TextView
+        android:id="@+id/shelfTV"
+        android:layout_width="87dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/shelf"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/addBookTV"
+        app:layout_constraintTop_toBottomOf="@+id/shelfIV" />
+
+    <ImageView
+        android:id="@+id/readingIV"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/reading_icon"
+        app:layout_constraintEnd_toStartOf="@+id/buddyNavIV"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addBookTV" />
+
+    <ImageView
+        android:id="@+id/buddyNavIV"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/buddy_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/readingIV"
+        app:layout_constraintTop_toBottomOf="@+id/shelfTV" />
+
+    <TextView
+        android:id="@+id/readingTV"
+        android:layout_width="87dp"
+        android:layout_height="27dp"
+        android:text="@string/reading"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/buddyText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/readingIV" />
+
+    <TextView
+        android:id="@+id/buddyText"
+        android:layout_width="87dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/buddys"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/readingTV"
+        app:layout_constraintTop_toBottomOf="@+id/buddyNavIV" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+</LinearLayout>

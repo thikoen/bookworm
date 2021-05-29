@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="de.hsrm.mi.mobilecomputing.bookworm.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_shelfFragment"
+            app:destination="@id/shelfFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_buddyNavFragment"
+            app:destination="@id/buddyNavFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_scannerFragment"
+            app:destination="@id/scannerFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_readingFragment"
+            app:destination="@id/readingFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/shelfFragment"
+        android:name="de.hsrm.mi.mobilecomputing.bookworm.features.shelf.ShelfFragment"
+        android:label="fragment_shelf"
+        tools:layout="@layout/fragment_shelf">
+        <action
+            android:id="@+id/action_shelfFragment_to_singleBookDetailsFragment"
+            app:destination="@id/singleBookDetailsFragment"
+            app:enterAnim="@anim/fragment_open_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/scannerFragment"
+        android:name="de.hsrm.mi.mobilecomputing.bookworm.features.scanner.ScannerFragment"
+        android:label="fragment_scanner"
+        tools:layout="@layout/fragment_scanner">
+        <action
+            android:id="@+id/action_scannerFragment_to_scanCompletedFragment"
+            app:destination="@id/scanCompletedFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/scanCompletedFragment"
+        android:name="de.hsrm.mi.mobilecomputing.bookworm.features.scanner.ScanCompletedFragment"
+        android:label="fragment_scan_completed"
+        tools:layout="@layout/fragment_scan_completed">
+        <action
+            android:id="@+id/action_scanCompletedFragment_to_singleBookDetailsFragment"
+            app:destination="@id/singleBookDetailsFragment"
+            app:enterAnim="@anim/fragment_open_enter" />
+        <argument
+            android:name="book"
+            app:argType="de.hsrm.mi.mobilecomputing.bookworm.model.Book" />
+        <action
+            android:id="@+id/action_scanCompletedFragment_to_scannerFragment"
+            app:destination="@id/scannerFragment"
+            app:enterAnim="@anim/fragment_open_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/buddyNavFragment"
+        android:name="de.hsrm.mi.mobilecomputing.bookworm.features.buddy.BuddyNavFragment"
+        android:label="fragment_buddy_nav"
+        tools:layout="@layout/fragment_buddy_nav">
+        <action
+            android:id="@+id/action_buddyNavFragment_to_buddyListFragment"
+            app:destination="@id/buddyListFragment"
+            app:enterAnim="@anim/fragment_open_enter" />
+        <action
+            android:id="@+id/action_buddyNavFragment_to_requestListFragment"
+            app:destination="@id/requestListFragment"
+            app:enterAnim="@anim/fragment_open_enter" />
+        <action
+            android:id="@+id/action_buddyNavFragment_to_borrowListFragment"
+            app:destination="@id/borrowListFragment"
+            app:enterAnim="@anim/fragment_open_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/buddyListFragment"
+        android:name="de.hsrm.mi.mobilecomputing.bookworm.features.buddy.BuddyListFragment"
+        android:label="fragment_buddy_list"
+        tools:layout="@layout/fragment_buddy_list">
+        <action
+            android:id="@+id/action_buddyListFragment_to_addFriendFragment"
+            app:destination="@id/addFriendFragment"
+            app:enterAnim="@anim/fragment_open_enter" />
+        <action
+            android:id="@+id/action_buddyListFragment_to_buddyShelfFragment"
+            app:destination="@id/buddyShelfFragment"
+            app:enterAnim="@anim/fragment_open_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFriendFragment"
+        android:name="de.hsrm.mi.mobilecomputing.bookworm.features.buddy.AddFriendFragment"
+        android:label="fragment_add_friend"
+        tools:layout="@layout/fragment_add_friend"/>
+    <fragment
+        android:id="@+id/singleBookDetailsFragment"
+        android:name="de.hsrm.mi.mobilecomputing.bookworm.features.shelf.SingleBookDetailsFragment"
+        android:label="fragment_single_book_details"
+        tools:layout="@layout/fragment_single_book_details">
+        <argument
+            android:name="book"
+            app:argType="de.hsrm.mi.mobilecomputing.bookworm.model.Book" />
+        <action
+            android:id="@+id/action_singleBookDetailsFragment_to_shelfFragment"
+            app:destination="@id/shelfFragment"
+            app:enterAnim="@anim/fragment_open_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/buddyShelfFragment"
+        android:name="de.hsrm.mi.mobilecomputing.bookworm.features.shelf.BuddyShelfFragment"
+        android:label="fragment_buddy_shelf"
+        tools:layout="@layout/fragment_buddy_shelf">
+        <argument
+            android:name="UID"
+            app:argType="string" />
+        <argument
+            android:name="Name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestListFragment"
+        android:name="de.hsrm.mi.mobilecomputing.bookworm.features.requests.RequestListFragment"
+        android:label="fragment_request_list"
+        tools:layout="@layout/fragment_request_list">
+        <action
+            android:id="@+id/action_requestListFragment_to_bookRequestFragment"
+            app:destination="@id/bookRequestFragment"
+            app:enterAnim="@anim/fragment_open_enter" />
+        <action
+            android:id="@+id/action_requestListFragment_to_friendRequestFragment"
+            app:destination="@id/friendRequestFragment"
+            app:enterAnim="@anim/fragment_open_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookRequestFragment"
+        android:name="de.hsrm.mi.mobilecomputing.bookworm.features.requests.BookRequestFragment"
+        android:label="fragment_book_request"
+        tools:layout="@layout/fragment_book_request">
+        <argument
+            android:name="req"
+            app:argType="de.hsrm.mi.mobilecomputing.bookworm.model.Request" />
+        <action
+            android:id="@+id/action_bookRequestFragment_to_confirmationFragment"
+            app:destination="@id/confirmationFragment"
+            app:enterAnim="@anim/fragment_open_enter" />
+        <action
+            android:id="@+id/action_bookRequestFragment_to_singleBookDetailsFragment"
+            app:destination="@id/singleBookDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/friendRequestFragment"
+        android:name="de.hsrm.mi.mobilecomputing.bookworm.features.requests.FriendRequestFragment"
+        android:label="fragment_friend_request"
+        tools:layout="@layout/fragment_friend_request">
+        <argument
+            android:name="req"
+            app:argType="de.hsrm.mi.mobilecomputing.bookworm.model.Request" />
+        <action
+            android:id="@+id/action_friendRequestFragment_to_confirmationFragment"
+            app:destination="@id/confirmationFragment"
+            app:enterAnim="@anim/fragment_open_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmationFragment"
+        android:name="de.hsrm.mi.mobilecomputing.bookworm.features.requests.ConfirmationRequestFragment"
+        android:label="fragment_confirmation_request"
+        tools:layout="@layout/fragment_confirmation_request">
+        <action
+            android:id="@+id/action_confirmationFragment_to_requestListFragment"
+            app:destination="@id/requestListFragment"
+            app:enterAnim="@anim/fragment_open_enter" />
+        <argument
+            android:name="req"
+            app:argType="de.hsrm.mi.mobilecomputing.bookworm.model.Request" />
+        <argument
+            android:name="confirmationType"
+            app:argType="de.hsrm.mi.mobilecomputing.bookworm.model.ConfirmationType" />
+    </fragment>
+    <fragment
+        android:id="@+id/borrowListFragment"
+        android:name="de.hsrm.mi.mobilecomputing.bookworm.features.borrowlist.BorrowListFragment"
+        android:label="fragment_borrow_list"
+        tools:layout="@layout/fragment_borrow_list">
+        <action
+            android:id="@+id/action_borrowListFragment_to_singleBookDetailsFragment"
+            app:destination="@id/singleBookDetailsFragment"
+            app:enterAnim="@anim/fragment_open_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/readingFragment"
+        android:name="de.hsrm.mi.mobilecomputing.bookworm.features.readinglist.ReadingFragment"
+        android:label="fragment_reading"
+        tools:layout="@layout/fragment_reading">
+        <action
+            android:id="@+id/action_readingFragment_to_shelfFragment"
+            app:destination="@id/shelfFragment"
+            app:enterAnim="@anim/fragment_open_enter" />
+        <action
+            android:id="@+id/action_readingFragment_to_singleBookDetailsFragment"
+            app:destination="@id/singleBookDetailsFragment"
+            app:enterAnim="@anim/fragment_open_enter" />
+    </fragment>
+</navigation>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/requestUserNameBorrowingTV"
+        android:layout_width="200dp"
+        android:maxLines="1"
+        android:layout_height="wrap_content"
+        android:text="@string/borrow_list"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/borrowingBookTitle"
+        app:layout_constraintEnd_toStartOf="@+id/requestUserAvatar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/borrowingBookTitle"
+        android:layout_width="200dp"
+        android:maxLines="2"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bookworm_home"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/borrowingBookAuthor"
+        app:layout_constraintEnd_toEndOf="@+id/requestUserNameBorrowingTV"
+        app:layout_constraintStart_toStartOf="@+id/requestUserNameBorrowingTV"
+        app:layout_constraintTop_toBottomOf="@+id/requestUserNameBorrowingTV" />
+
+    <TextView
+        android:id="@+id/borrowingBookAuthor"
+        android:layout_width="200dp"
+        android:maxLines="2"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/bookworm_home"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/borrowingBookTitle"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/borrowingBookTitle"
+        app:layout_constraintTop_toBottomOf="@+id/borrowingBookTitle" />
+
+    <ImageView
+        android:id="@+id/requestUserAvatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/default_avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/requestUserNameBorrowingTV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/borrowedSinceTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/lended_since"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/requestUserAvatar"
+        app:layout_constraintStart_toStartOf="@+id/requestUserAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/requestUserAvatar" />
+
+    <TextView
+        android:id="@+id/lending_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_date"
+        app:layout_constraintBottom_toTopOf="@+id/returnIconIV"
+        app:layout_constraintEnd_toEndOf="@+id/borrowedSinceTV"
+        app:layout_constraintStart_toStartOf="@+id/borrowedSinceTV"
+        app:layout_constraintTop_toBottomOf="@+id/borrowedSinceTV" />
+
+    <ImageView
+        android:id="@+id/returnIconIV"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/return_icon"
+        app:layout_constraintBottom_toTopOf="@+id/returnTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lending_date" />
+
+    <TextView
+        android:id="@+id/returnTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/return_book"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/returnIconIV"
+        app:layout_constraintStart_toStartOf="@+id/returnIconIV"
+        app:layout_constraintTop_toBottomOf="@+id/returnIconIV" />
+</androidx.constraintlayout.widget.ConstraintLayout>

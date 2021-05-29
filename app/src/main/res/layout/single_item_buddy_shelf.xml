@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/likeIconIV"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/like_icon"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/bookTitleTV_BS"
+        app:layout_constraintEnd_toEndOf="@+id/bookCoverIV_BS"
+        app:layout_constraintStart_toEndOf="@+id/availableTextTV"
+        app:layout_constraintTop_toBottomOf="@+id/bookCoverIV_BS" />
+    <ImageView
+        android:id="@+id/bookCoverIV_BS"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/das_lied_von_eis_und_feuer" />
+
+    <ImageView
+        android:id="@+id/availableIconIV"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/free_icon"
+        app:layout_constraintBottom_toTopOf="@+id/bookTitleTV_BS"
+        app:layout_constraintStart_toStartOf="@+id/bookCoverIV_BS"
+        app:layout_constraintTop_toBottomOf="@+id/bookCoverIV_BS"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/availableTextTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/borrowed"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/bookTitleTV_BS"
+        app:layout_constraintStart_toEndOf="@+id/availableIconIV"
+        app:layout_constraintTop_toBottomOf="@+id/bookCoverIV_BS" />
+
+    <TextView
+        android:id="@+id/bookTitleTV_BS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/bookworm_home"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/bookCoverIV_BS"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="@+id/bookCoverIV_BS"
+        app:layout_constraintTop_toBottomOf="@id/availableIconIV" />
+
+    <TextView
+        android:id="@+id/bookAuthorTV_BS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/borrow_list"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/bookTitleTV_BS"
+        app:layout_constraintStart_toStartOf="@+id/bookTitleTV_BS"
+        app:layout_constraintTop_toBottomOf="@+id/bookTitleTV_BS" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

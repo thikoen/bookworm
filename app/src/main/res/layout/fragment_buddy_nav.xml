@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_centerHorizontal="true">
+    <FrameLayout
+        android:id="@+id/flToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/requestIV"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/request_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/alertRequestIV"
+            android:layout_width="52dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_baseline_notification_important_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.369"
+            app:layout_constraintStart_toStartOf="@id/requestIV"
+            app:layout_constraintTop_toTopOf="@+id/notificationBellIV"
+            android:layout_marginTop="65dp"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/notificationBellIV"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="invisible"
+            android:src="@drawable/ic_baseline_notifications_24"
+            app:layout_constraintBottom_toBottomOf="@+id/requestIV"
+            app:layout_constraintStart_toEndOf="@+id/requestIV"
+            app:layout_constraintTop_toTopOf="@+id/requestIV"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+        android:id="@+id/requestTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/requests"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/requestIV" />
+
+    <ImageView
+        android:id="@+id/buddyIV"
+        android:layout_width="100dp"
+        android:layout_height="121dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/buddy_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/requestTV" />
+
+        <ImageView
+            android:id="@+id/alertBuddysIV"
+            android:layout_width="52dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_baseline_notification_important_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.369"
+            app:layout_constraintStart_toStartOf="@id/requestIV"
+            app:layout_constraintTop_toTopOf="@+id/buddyIV"
+            android:layout_marginTop="65dp"
+            android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/buddyTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buddys"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buddyIV" />
+
+    <ImageView
+        android:id="@+id/borrowListIV"
+        android:layout_marginTop="20dp"
+        android:layout_width="100dp"
+        android:layout_height="121dp"
+        android:src="@drawable/borrow_list_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buddyTV" />
+
+    <TextView
+        android:id="@+id/borrowListTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/borrow_list"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/borrowListIV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+</LinearLayout>

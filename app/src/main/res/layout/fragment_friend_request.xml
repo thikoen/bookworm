@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_centerHorizontal="true">
+    <FrameLayout
+        android:id="@+id/flToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/userRequestImageIV"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/default_avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/friendRequestDetailTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="@string/borrow_list"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/userRequestImageIV"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="@+id/userRequestImageIV"
+        app:layout_constraintTop_toBottomOf="@+id/userRequestImageIV" />
+
+
+    <TextView
+        android:id="@+id/wantsToFriendTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wants_friends"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="@+id/friendRequestDetailTV"
+        app:layout_constraintRight_toRightOf="@+id/friendRequestDetailTV"
+        app:layout_constraintTop_toBottomOf="@+id/friendRequestDetailTV" />
+
+    <ImageView
+        android:id="@+id/declineFriendIV"
+        android:layout_width="100dp"
+        android:layout_height="121dp"
+        android:layout_marginTop="116dp"
+        android:src="@drawable/decline_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/acceptFriendIV"
+        app:layout_constraintTop_toBottomOf="@+id/wantsToFriendTV" />
+
+    <ImageView
+        android:id="@+id/acceptFriendIV"
+        android:layout_width="100dp"
+        android:layout_height="121dp"
+        android:layout_marginTop="116dp"
+        android:src="@drawable/accept_icon"
+        app:layout_constraintEnd_toStartOf="@+id/declineFriendIV"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wantsToFriendTV" />
+
+    <TextView
+        android:id="@+id/acceptFriendTV"
+        android:layout_width="73dp"
+        android:layout_height="31dp"
+        android:text="@string/accept"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/acceptFriendIV"
+        app:layout_constraintStart_toStartOf="@+id/acceptFriendIV"
+        app:layout_constraintTop_toBottomOf="@+id/acceptFriendIV" />
+
+    <TextView
+        android:id="@+id/declineFriendTV"
+        android:layout_width="73dp"
+        android:layout_height="31dp"
+        android:text="@string/decline"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/declineFriendIV"
+        app:layout_constraintStart_toStartOf="@+id/declineFriendIV"
+        app:layout_constraintTop_toBottomOf="@+id/declineFriendIV" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="User Data">
+
+        <EditTextPreference
+            android:defaultValue="Bookuser"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:key="Name"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary="Your Name"
+            android:title="Name"
+            app:icon="@drawable/ic_baseline_account_circle_24" />
+        <EditTextPreference
+            android:icon="@drawable/ic_baseline_mail_outline_24"
+            android:key="E-Mail"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary="Your E-Mail"
+            android:title="E-Mail"
+            app:icon="@drawable/ic_baseline_mail_outline_24" />
+        <EditTextPreference
+            android:icon="@drawable/ic_baseline_security_24"
+            android:key="Password"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary="********"
+            android:title="Password"
+            app:icon="@drawable/ic_baseline_security_24" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Privacy">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:icon="@drawable/ic_baseline_visibility_off_24"
+            android:key="booksvisible"
+            android:title="Buddys can see my books"
+            app:icon="@drawable/ic_baseline_visibility_off_24" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Visuals and Notifications">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:icon="@drawable/ic_baseline_settings_brightness_24"
+            android:key="Darkmode"
+            android:title="Darkmode"
+            app:icon="@drawable/ic_baseline_settings_brightness_24" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:icon="@drawable/ic_baseline_notifications_active_24"
+            android:key="notify"
+            android:title="Notify me of inquiries"
+            app:icon="@drawable/ic_baseline_notifications_active_24" />
+    </PreferenceCategory>
+</PreferenceScreen>

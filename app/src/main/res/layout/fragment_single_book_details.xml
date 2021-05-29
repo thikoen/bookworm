@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_centerHorizontal="true">
+    <FrameLayout
+        android:id="@+id/flToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/deleteBookIV"
+        android:layout_width="37dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="240dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/bookCoverIV_BS"
+        app:layout_constraintTop_toTopOf="@id/bookCoverIV_BS"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:srcCompat="@drawable/ic_baseline_delete_forever_24" />
+
+    <ImageView
+        android:id="@+id/bookCoverIV_BS"
+        android:layout_width="213dp"
+        android:layout_height="274dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/book_small" />
+
+    <TextView
+        android:id="@+id/bookTitleTV_BS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/bookCoverIV_BS"
+        app:layout_constraintStart_toStartOf="@+id/bookCoverIV_BS"
+        app:layout_constraintTop_toBottomOf="@id/bookCoverIV_BS" />
+
+    <TextView
+        android:id="@+id/bookAuthorTV_BS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/bookTitleTV_BS"
+        app:layout_constraintStart_toStartOf="@+id/bookTitleTV_BS"
+        app:layout_constraintTop_toBottomOf="@+id/bookTitleTV_BS" />
+
+    <TextView
+        android:id="@+id/reading_status_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Reading"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookAuthorTV_BS" />
+
+    <ImageView
+        android:id="@+id/availableIconIV"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/free_icon"
+        app:layout_constraintEnd_toStartOf="@+id/reading_status_TV"
+        app:layout_constraintHorizontal_bias="0.901"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookAuthorTV_BS" />
+
+    <Spinner
+        android:id="@+id/avaliable_choicebox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/dislikeIconIV"
+        app:layout_constraintStart_toStartOf="@+id/likeIconIV"
+        app:layout_constraintTop_toBottomOf="@+id/reading_status_TV" />
+
+    <ImageView
+        android:id="@+id/likeIconIV"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/like_icon"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/dislikeIconIV"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avaliable_choicebox" />
+
+    <ImageView
+        android:id="@+id/dislikeIconIV"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/dislike_icon"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/likeIconIV"
+        app:layout_constraintTop_toBottomOf="@+id/avaliable_choicebox" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="239dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/dislikeIconIV"
+        app:layout_constraintStart_toStartOf="@+id/likeIconIV"
+        app:layout_constraintTop_toBottomOf="@+id/likeIconIV" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

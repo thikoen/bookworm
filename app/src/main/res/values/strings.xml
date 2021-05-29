@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">BookWorm</string>
+    <string name="bookworm_home">Welcome, Bookworm!</string>
+    <string name="add_book">Add Book</string>
+    <string name="shelf">Shelf</string>
+    <string name="reading">Reading</string>
+    <string name="buddys">Buddys</string>
+    <string name="scan_barcode">Scan Barcode</string>
+    <string name="requests">Requests</string>
+    <string name="borrow_list">Borrow List</string>
+    <string name="wants_friends">Wants to become friends!</string>
+    <string name="add_friend">Add friend</string>
+    <string name="scan_complete">Added to your shelf!</string>
+    <string name="show">Show!</string>
+    <string name="more">More!</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="lending">LENDING</string>
+    <string name="borrowed">BORROWED</string>
+    <string name="title_activity_buddy_list">BuddyListActivity</string>
+    <string name="to_book">TO BOOK</string>
+    <string name="lended_since">lended since:</string>
+    <string name="borrowed_since">borrowed since:</string>
+    <string name="default_date">December, 12th 2020</string>
+    <string name="Free">Free</string>
+    <string name="Occupied">Occupied</string>
+    <string name="Reserved">Reserved</string>
+    <string name="wants_to_borrow">wants to borrow:</string>
+    <string name="wants_to_return">wants to return:</string>
+    <string name="accept">accept</string>
+    <string name="decline">decline</string>
+    <string name="ok">OK!</string>
+    <string name="return_book">Return book</string>
+    <string name="wish_to_read">Wish to read</string>
+    <string name="finished_reading">Finished reading</string>
+    <string name="no_books">There are no Books in your shelf at this moment…</string>
+    <string name="no_requests">You don\'t have any requests at this moment.</string>
+    <string name="no_buddys">You don\'t have any buddys at this moment…</string>
+    <string name="no_wish_to_read">There are no Books you wish to read.</string>
+    <string name="no_reading">There are no Books you are currently reading.</string>
+    <string name="no_finished_reading">There are no Books you finished reading.</string>
+    <string name="no_books_buddy_shelf">Your buddy has no Books at this moment.</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string-array name="reading_choice">
+        <item>Change Status</item>
+        <item>Reading</item>
+        <item>Wish to read</item>
+        <item>Finished</item>
+    </string-array>
+</resources>
